@@ -13,7 +13,7 @@ const Counter = () => {
   };
 
   let reset = () => {
-    setCount(count == 0);
+    setCount(0);
   };
 
   return (
