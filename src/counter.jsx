@@ -2,18 +2,14 @@ import React, { useState } from "react";
 import "./counter.css";
 
 const Counter = () => {
-  let [count, setCount] = useState(0);
+  let [count, setCount] = useState("0");
 
   let increment = () => {
     setCount(count + 1);
   };
 
   let decrement = () => {
-    if (count > 0) {
-      setCount(count - 1);
-    } else {
-      setCount(0);
-    }
+    setCount(count - 1);
   };
 
   let reset = () => {
@@ -26,10 +22,10 @@ const Counter = () => {
       <div className="counter-options">
         <p className="counter-display">{count}</p>
         <div className="counter-buttons">
-          <button onClick={increment} className="increment counter-button">
+          <button onClick={increment} className="increment bttn counter-button">
             Increment
           </button>
-          <button onClick={decrement} className="decrement counter-button">
+          <button onClick={decrement} className="decrement bttn counter-button">
             Decrement
           </button>
           <button onClick={reset} className="reset counter-button">
